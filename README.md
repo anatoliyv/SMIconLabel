@@ -6,7 +6,9 @@ UILabel with possibility to place small icon on the left or on the right side. T
 
 ![Preview](https://raw.githubusercontent.com/anatoliyv/SMIconLabel/master/Main/screenshot.png)
 
-**Note:** ### Installation
+**Note:** To make icon works as expected you should set `numberOfLines = 0` for SMIconLabel
+
+### Installation
 
 This repo has an example project, but if you want to include SMIconLabel you need only one file **SMIconLabel.swift**. Alternatively you can use CocoaPods to install:
 
@@ -25,6 +27,7 @@ labelLeft.text = "Icon on the left, text on the left"
 // Here is the magic
 labelLeft.icon = UIImage(named: "Bell") // Set icon image
 labelLeft.iconPadding = 5               // Set padding between icon and label
+labelLeft.numberOfLines = 0             // Required
 labelLeft.iconPosition = SMIconLabelPosition.Left // Icon position
 view.addSubview(labelLeft)
 ```
