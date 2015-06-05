@@ -20,7 +20,8 @@ Pod::Spec.new do |s|
   s.summary      = "UILabel with image placed on the left or right side"
 
   s.description  = <<-DESC
-                   List of swift extensions for every day usage.
+                   UILabel with possibility to place small icon on the left or on the right side. 
+                   Take a look at preview image or build smaple app to see how it works.
                    DESC
 
   s.homepage     = "https://github.com/anatoliyv/SMIconLabel"
