@@ -23,9 +23,9 @@ var labelLeft = SMIconLabel(frame: CGRectMake(10, 10, view.frame.size.width - 20
 labelLeft.text = "Icon on the left, text on the left"
 
 // Here is the magic
-labelLeft.icon = UIImage(named: "Bell") // set icon image
-labelLeft.iconPadding = 5               // set padding between icon and label
-labelLeft.iconPosition = SMIconLabelPosition.Left // icou can be from the left or the right side
+labelLeft.icon = UIImage(named: "Bell") // Set icon image
+labelLeft.iconPadding = 5               // Set padding between icon and label
+labelLeft.iconPosition = SMIconLabelPosition.Left // Icon position
 view.addSubview(labelLeft)
 ```
 
