@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
                    List of swift extensions for every day usage.
                    DESC
 
-  s.homepage     = "https://github.com/anatoliyv/SwiftExtensions"
+  s.homepage     = "https://github.com/anatoliyv/SMIconLabel"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
