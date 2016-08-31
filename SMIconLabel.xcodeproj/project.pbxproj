@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A559CD1D7747FA003685EB /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18A559CC1D7747FA003685EB /* background.jpeg */; };
 		18BF114A1B0B9068006D819A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF11411B0B9068006D819A /* AppDelegate.swift */; };
 		18BF114F1B0B9068006D819A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF11481B0B9068006D819A /* ViewController.swift */; };
 		18BF11511B0B907A006D819A /* SMIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF11501B0B907A006D819A /* SMIconLabel.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18A559CC1D7747FA003685EB /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
 		18BF111B1B0B902E006D819A /* SMIconLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMIconLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BF11411B0B9068006D819A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18BF11431B0B9068006D819A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				18BF11471B0B9068006D819A /* Info.plist */,
 				18BF11481B0B9068006D819A /* ViewController.swift */,
 				18DF43E71B21B281002EBCD3 /* screenshot.png */,
+				18A559CC1D7747FA003685EB /* background.jpeg */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -104,7 +107,8 @@
 		18BF11131B0B902E006D819A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Smartarium.com;
 				TargetAttributes = {
 					18BF111A1B0B902E006D819A = {
@@ -139,6 +143,7 @@
 				18BF11531B0B909C006D819A /* Main.storyboard in Resources */,
 				18BF11541B0B909C006D819A /* Images.xcassets in Resources */,
 				18DF43E81B21B281002EBCD3 /* screenshot.png in Resources */,
+				18A559CD1D7747FA003685EB /* background.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +203,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -266,6 +272,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Main/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartarium.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -276,6 +283,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Main/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.smartarium.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

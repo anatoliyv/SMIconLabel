@@ -16,11 +16,26 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="IJF-CM-5du">
+                                <rect key="frame" x="0.0" y="0.0" width="602" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IJF-CM-5du" secondAttribute="trailing" constant="-2" id="GaS-ww-KcS"/>
+                            <constraint firstItem="IJF-CM-5du" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lts-Yj-wW0"/>
+                            <constraint firstItem="IJF-CM-5du" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pv0-Ar-gWb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IJF-CM-5du" secondAttribute="bottom" id="Ufe-2p-vzr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="534" y="377"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.jpeg" width="640" height="1136"/>
+    </resources>
 </document>

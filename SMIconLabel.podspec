@@ -16,11 +16,11 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SMIconLabel"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "UILabel with image placed on the left or right side"
 
   s.description  = <<-DESC
-                   UILabel with possibility to place small icon on the left or on the right side. 
+                   UILabel with possibility to place small icon on the left or on the right side.
                    Take a look at preview image or build smaple app to see how it works.
                    DESC
 
@@ -74,7 +74,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/anatoliyv/SMIconLabel.git", :tag => "v.0.0.1" }
+  s.source       = { :git => "https://github.com/anatoliyv/SMIconLabel.git", :tag => "v.0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
