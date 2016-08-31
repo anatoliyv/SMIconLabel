@@ -6,8 +6,6 @@ UILabel with possibility to place small icon on the left or on the right side. T
 
 ![Preview](https://raw.githubusercontent.com/anatoliyv/SMIconLabel/master/Main/screenshot.png)
 
-**Note:** To make icon works as expected you should set `numberOfLines = 1` for your instance of SMIconLabel
-
 ### Installation
 
 #### Manually
