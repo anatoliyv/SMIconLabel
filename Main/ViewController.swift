@@ -22,6 +22,7 @@ class ViewController: UIViewController {
             label.font = UIFont.systemFontOfSize(12)
             label.textColor = UIColor.whiteColor()
             label.icon = image
+            label.iconPadding = 5
             label.clipsToBounds = true
             label.layer.cornerRadius = 4
 
