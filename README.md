@@ -25,9 +25,23 @@ let labelLeft = SMIconLabel(frame: CGRectMake(10, 10, view.frame.size.width - 20
 labelLeft.text = "Icon on the left, text on the left"
 
 // Here is the magic
-labelLeft.icon = UIImage(named: "Bell") // Set icon image
-labelLeft.iconPadding = 5               // Set padding between icon and label
-labelLeft.numberOfLines = 0             // Required
-labelLeft.iconPosition = .Left          // Icon position
+labelLeft.icon = UIImage(named: "Bell")    // Set icon image
+labelLeft.iconPadding = 5                  // Set padding between icon and label
+labelLeft.numberOfLines = 0                // Required
+labelLeft.iconPosition = ( .Left, .Top )   // Icon position
 view.addSubview(labelLeft)
+```
+
+### Icon Position
+
+Icon position should be customized via `iconPosition` property. It's defined next way:
+
+```
+typealias SMIconPosition = (horizontal: SMIconHorizontalPosition, vertical: SMIconVerticalPosition)
+```
+
+In this case if you want to make icon to be placed in top-left do:
+
+```
+labelLeft.iconPosition = ( .Left, .Top )
 ```
