@@ -28,6 +28,6 @@ labelLeft.text = "Icon on the left, text on the left"
 labelLeft.icon = UIImage(named: "Bell") // Set icon image
 labelLeft.iconPadding = 5               // Set padding between icon and label
 labelLeft.numberOfLines = 0             // Required
-labelLeft.iconPosition = SMIconLabelPosition.Left // Icon position
+labelLeft.iconPosition = .Left          // Icon position
 view.addSubview(labelLeft)
 ```
