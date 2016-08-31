@@ -8,19 +8,34 @@
 
 import UIKit
 
+///
+/// Icon position toward text
+///
 public enum SMIconLabelPosition {
-    case Left, Right
+    case Left
+    case Right
 }
 
+///
+/// `UILabel` with possibility to place small icon on the left or on the right side.
+/// The only limitation is that `numberOfLines` property should be 1 otherwise icon 
+/// will be ignored.
+///
 public class SMIconLabel: UILabel {
     
-    /** Image that will be placed with a text*/
-    public var icon: UIImage?
+    /// Image that will be placed with a text
+    public var icon: UIImage? {
+        didSet {
+            if icon == nil {
+                iconView?.removeFromSuperview()
+            }
+        }
+    }
     
-    /** Position of an image */
+    /// Position of an image
     public var iconPosition: SMIconLabelPosition = .Left
     
-    /** Additional spacing between text and image */
+    /// Additional spacing between text and image
     public var iconPadding: CGFloat = 0
     
     // MARK: Privates
@@ -77,8 +92,6 @@ public class SMIconLabel: UILabel {
                 addSubview(iconView)
                 super.drawTextInRect(newRect)
             }
-            
         }
     }
-    
 }
