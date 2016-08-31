@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SMIconLabel"
-  s.version      = "0.0.2"
+  s.version      = "0.1.0"
   s.summary      = "UILabel with image placed on the left or right side"
 
   s.description  = <<-DESC
