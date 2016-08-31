@@ -10,7 +10,7 @@ UILabel with possibility to place small icon on the left or on the right side. T
 
 ### Installation
 
-#### Manualy
+#### Manually
 
 This repo has an example project, but if you want to include SMIconLabel you need only one file **SMIconLabel.swift**.
 
