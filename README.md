@@ -2,15 +2,21 @@
 
 ![CocoaPods](https://img.shields.io/cocoapods/v/SMIconLabel.svg)
 
-UILabel with possibility to place small icon on the left or on the right side. Take a look at preview image or build smaple app to see how it works.
+UILabel with possibility to place small icon on the left or on the right side. Take a look at preview image or build sample app to see how it works.
 
 ![Preview](https://raw.githubusercontent.com/anatoliyv/SMIconLabel/master/Main/screenshot.png)
 
-**Note:** To make icon works as expected you should set `numberOfLines = 1` for SMIconLabel
+**Note:** To make icon works as expected you should set `numberOfLines = 1` for your instance of SMIconLabel
 
 ### Installation
 
-This repo has an example project, but if you want to include SMIconLabel you need only one file **SMIconLabel.swift**. Alternatively you can use CocoaPods to install:
+#### Manualy
+
+This repo has an example project, but if you want to include SMIconLabel you need only one file **SMIconLabel.swift**.
+
+#### CocoaPods
+
+Alternatively you can use CocoaPods to install:
 
 ```
 pod 'SMIconLabel'
@@ -18,7 +24,7 @@ pod 'SMIconLabel'
 
 ### Usage
 
-Usage is as simple as possible. Here is an swift example:
+Usage is as simple as possible. Here is an Swift 2.0 example:
 
 ```
 let labelLeft = SMIconLabel(frame: CGRectMake(10, 10, view.frame.size.width - 20, 20))
