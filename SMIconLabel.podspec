@@ -74,7 +74,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/anatoliyv/SMIconLabel.git", :tag => "v.0.0.1" }
+  s.source       = { :git => "https://github.com/anatoliyv/SMIconLabel.git", :tag => "v.0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
