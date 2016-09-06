@@ -25,6 +25,8 @@ public enum SMIconVerticalPosition {
     case Bottom
 }
 
+public typealias SMIconPosition = (horizontal: SMIconHorizontalPosition, vertical: SMIconVerticalPosition)
+
 ///
 /// `UILabel` with possibility to place small icon on the left or on the right side.
 /// The only limitation is that `numberOfLines` property should be 1 otherwise icon 
@@ -32,8 +34,6 @@ public enum SMIconVerticalPosition {
 ///
 public class SMIconLabel: UILabel {
 
-    public typealias SMIconPosition = (horizontal: SMIconHorizontalPosition, vertical: SMIconVerticalPosition)
-    
     /// Image that will be placed with a text
     public var icon: UIImage? {
         didSet {
