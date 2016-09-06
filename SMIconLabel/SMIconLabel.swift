@@ -40,6 +40,7 @@ public class SMIconLabel: UILabel {
             if icon == nil {
                 iconView?.removeFromSuperview()
             }
+            setNeedsDisplay()
         }
     }
     
