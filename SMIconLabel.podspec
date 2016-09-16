@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SMIconLabel"
-  s.version      = "0.3.0"
+  s.version      = "0.4.0"
   s.summary      = "UILabel with image placed on the left or right side"
 
   s.description  = <<-DESC
@@ -74,7 +74,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/anatoliyv/SMIconLabel.git", :tag => "v.0.3.0" }
+  s.source       = { :git => "https://github.com/anatoliyv/SMIconLabel.git", :tag => "v.0.4.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
