@@ -12,17 +12,17 @@ import UIKit
 /// Icon horizontal position toward text
 ///
 public enum SMIconHorizontalPosition {
-    case Left
-    case Right
+    case left
+    case right
 }
 
 ///
 /// Icon vertical position
 ///
 public enum SMIconVerticalPosition {
-    case Top
-    case Center
-    case Bottom
+    case top
+    case center
+    case bottom
 }
 
 public typealias SMIconPosition = (horizontal: SMIconHorizontalPosition, vertical: SMIconVerticalPosition)
@@ -45,7 +45,7 @@ public class SMIconLabel: UILabel {
     }
     
     /// Position of an image
-    public var iconPosition: SMIconPosition = ( .Left, .Top )
+    public var iconPosition: SMIconPosition = ( .left, .top )
     
     /// Additional spacing between text and image
     public var iconPadding: CGFloat = 0
@@ -55,63 +55,63 @@ public class SMIconLabel: UILabel {
     private var iconView: UIImageView?
     
     // MARK: Custom text drawings
-    
-    public override func drawTextInRect(rect: CGRect) {
+
+    public override func drawText(in rect: CGRect) {
         guard let text = self.text as NSString? else { return }
         guard let icon = icon else {
-            super.drawTextInRect(rect)
+            super.drawText(in: rect)
             return
         }
         
         iconView?.removeFromSuperview()
         iconView = UIImageView(image: icon)
 
-        var newRect: CGRect = CGRectZero
-        let size = text.boundingRectWithSize(CGSizeMake(frame.width - icon.size.width - iconPadding, CGFloat.max),
-                                             options: NSStringDrawingOptions.UsesLineFragmentOrigin,
-                                             attributes: [ NSFontAttributeName : font ],
-                                             context: nil).size
+        var newRect = CGRect.zero
+        let size = text.boundingRect(with: CGSize(width: frame.width - icon.size.width - iconPadding, height: CGFloat.greatestFiniteMagnitude),
+                                     options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                                     attributes: [ NSFontAttributeName : font ],
+                                     context: nil).size
 
         guard let iconView = iconView else { return }
         let iconYPosition = (frame.height - iconView.frame.height) / 2
         let height = frame.height
 
-        if iconPosition.horizontal == .Left {
-            if textAlignment == .Left {
-                iconView.frame = CGRectOffset(iconView.frame, 0, iconYPosition)
-                newRect = CGRectMake(iconView.frame.width + iconPadding, 0, frame.width - (iconView.frame.width + iconPadding), height)
-            } else if textAlignment == .Right {
-                iconView.frame = CGRectOffset(iconView.frame, frame.width - size.width - iconView.frame.width - iconPadding, iconYPosition)
-                newRect = CGRectMake(frame.width - size.width - iconPadding, 0, size.width + iconPadding, height)
-            } else if textAlignment == .Center {
-                iconView.frame = CGRectOffset(iconView.frame, (frame.width - size.width) / 2 - iconPadding - iconView.frame.width, iconYPosition)
-                newRect = CGRectMake((frame.width - size.width) / 2, 0, size.width + iconPadding, height)
+        if iconPosition.horizontal == .left {
+            if textAlignment == .left {
+                iconView.frame = iconView.frame.offsetBy(dx: 0, dy: iconYPosition)
+                newRect = CGRect(x: iconView.frame.width + iconPadding, y: 0, width: frame.width - (iconView.frame.width + iconPadding), height: height)
+            } else if textAlignment == .right {
+                iconView.frame = iconView.frame.offsetBy(dx: frame.width - size.width - iconView.frame.width - iconPadding, dy: iconYPosition)
+                newRect = CGRect(x: frame.width - size.width - iconPadding, y: 0, width: size.width + iconPadding, height: height)
+            } else if textAlignment == .center {
+                iconView.frame = iconView.frame.offsetBy(dx: (frame.width - size.width) / 2 - iconPadding - iconView.frame.width, dy: iconYPosition)
+                newRect = CGRect(x: (frame.width - size.width) / 2, y: 0, width: size.width + iconPadding, height: height)
             }
-        } else if iconPosition.horizontal == .Right {
-            if textAlignment == .Left {
-                iconView.frame = CGRectOffset(iconView.frame, size.width + iconPadding, iconYPosition)
-                newRect = CGRectMake(0, 0, size.width, height)
-            } else if textAlignment == .Right {
-                iconView.frame = CGRectOffset(iconView.frame, frame.width - iconView.frame.width, iconYPosition)
-                newRect = CGRectMake(frame.width - size.width - iconView.frame.width - iconPadding, 0, size.width, height)
-            } else if textAlignment == .Center {
-                iconView.frame = CGRectOffset(iconView.frame, frame.width / 2 + size.width / 2 + iconPadding, iconYPosition)
-                newRect = CGRectMake((frame.width - size.width) / 2, 0, size.width, height)
+        } else if iconPosition.horizontal == .right {
+            if textAlignment == .left {
+                iconView.frame = iconView.frame.offsetBy(dx: size.width + iconPadding, dy: iconYPosition)
+                newRect = CGRect(x: 0, y: 0, width: size.width, height: height)
+            } else if textAlignment == .right {
+                iconView.frame = iconView.frame.offsetBy(dx: frame.width - iconView.frame.width, dy: iconYPosition)
+                newRect = CGRect(x: frame.width - size.width - iconView.frame.width - iconPadding, y: 0, width: size.width, height: height)
+            } else if textAlignment == .center {
+                iconView.frame = iconView.frame.offsetBy(dx: frame.width / 2 + size.width / 2 + iconPadding, dy: iconYPosition)
+                newRect = CGRect(x: (frame.width - size.width) / 2, y: 0, width: size.width, height: height)
             }
         }
 
         switch iconPosition.vertical {
-        case .Top:
+        case .top:
             iconView.frame.origin.y = (frame.height - size.height) / 2
 
-        case .Center:
+        case .center:
             iconView.frame.origin.y = (frame.height - iconView.frame.height) / 2
 
-        case .Bottom:
+        case .bottom:
             iconView.frame.origin.y = frame.height - (frame.height - size.height) / 2 - iconView.frame.size.height
         }
 
         addSubview(iconView)
-        super.drawTextInRect(newRect)
+        super.drawText(in: newRect)
     }
 }
