@@ -32,10 +32,10 @@ public typealias SMIconPosition = (horizontal: SMIconHorizontalPosition, vertica
 /// The only limitation is that `numberOfLines` property should be 1 otherwise icon 
 /// will be ignored.
 ///
-public class SMIconLabel: UILabel {
+open class SMIconLabel: UILabel {
 
     /// Image that will be placed with a text
-    public var icon: UIImage? {
+    open var icon: UIImage? {
         didSet {
             if icon == nil {
                 iconView?.removeFromSuperview()
@@ -45,18 +45,18 @@ public class SMIconLabel: UILabel {
     }
     
     /// Position of an image
-    public var iconPosition: SMIconPosition = ( .left, .top )
+    open var iconPosition: SMIconPosition = ( .left, .top )
     
     /// Additional spacing between text and image
-    public var iconPadding: CGFloat = 0
+    open var iconPadding: CGFloat = 0
     
     // MARK: Privates
     
-    private var iconView: UIImageView?
+    fileprivate var iconView: UIImageView?
     
     // MARK: Custom text drawings
 
-    public override func drawText(in rect: CGRect) {
+    open override func drawText(in rect: CGRect) {
         guard let text = self.text as NSString? else { return }
         guard let icon = icon else {
             super.drawText(in: rect)
