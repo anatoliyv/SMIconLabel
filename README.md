@@ -1,6 +1,10 @@
 # SMIconLabel
 
-![CocoaPods](https://img.shields.io/cocoapods/v/SMIconLabel.svg)
+[![Version](https://img.shields.io/cocoapods/v/SMIconLabel.svg?style=flat)](http://cocoapods.org/pods/SMIconLabel)
+[![License](https://img.shields.io/cocoapods/l/SMIconLabel.svg?style=flat)](http://cocoapods.org/pods/SMIconLabel)
+[![Platform](https://img.shields.io/cocoapods/p/SMIconLabel.svg?style=flat)](http://cocoapods.org/pods/SMIconLabel)
+![](https://img.shields.io/badge/Supported-iOS8-4BC51D.svg?style=flat)
+![](https://img.shields.io/badge/Swift 3-compatible-4BC51D.svg?style=flat)
 
 UILabel with possibility to place small icon on the left or on the right side. Take a look at preview image or build sample app to see how it works.
 
