@@ -9,8 +9,8 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/anatoliyv/SMIconLabel"
   s.license      = "MIT"
   s.author             = { "Anatoliy Voropay" => "anatoliy.voropay@gmail.com" }
-  s.platform     = :ios, "9.0"
-  s.ios.deployment_target = "9.0"
+  s.platform     = :ios, "8.0"
+  s.ios.deployment_target = "8.0"
   s.source       = { :git => "https://github.com/anatoliyv/SMIconLabel.git", :tag => "v.0.5.0" }
   s.source_files  = "SMIconLabel/*"
   s.framework  = "UIKit"
