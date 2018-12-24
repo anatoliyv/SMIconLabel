@@ -8,31 +8,25 @@
 
 import UIKit
 
-///
-/// Icon horizontal position toward text
-///
-public enum SMIconHorizontalPosition {
-    case left
-    case right
-}
-
-///
-/// Icon vertical position
-///
-public enum SMIconVerticalPosition {
-    case top
-    case center
-    case bottom
-}
-
-public typealias SMIconPosition = (horizontal: SMIconHorizontalPosition, vertical: SMIconVerticalPosition)
-
-///
 /// `UILabel` with possibility to place small icon on the left or on the right side.
 /// The only limitation is that `numberOfLines` property should be 1 otherwise icon 
 /// will be ignored.
-///
 open class SMIconLabel: UILabel {
+
+    /// Icon horizontal position toward text
+    public enum HorizontalPosition {
+        case left
+        case right
+    }
+
+    /// Icon vertical position
+    public enum VerticalPosition {
+        case top
+        case center
+        case bottom
+    }
+
+    public typealias Position = (horizontal: HorizontalPosition, vertical: VerticalPosition)
 
     /// Image that will be placed with a text
     open var icon: UIImage? {
@@ -43,18 +37,13 @@ open class SMIconLabel: UILabel {
             setNeedsDisplay()
         }
     }
-    
     /// Position of an image
-    open var iconPosition: SMIconPosition = ( .left, .top )
-    
+    open var iconPosition: Position = ( .left, .top )
     /// Additional spacing between text and image
     open var iconPadding: CGFloat = 0
-    
-    // MARK: Privates
-    
     fileprivate var iconView: UIImageView?
     
-    // MARK: Custom text drawings
+    // MARK: - Custom text drawings
 
     open override func drawText(in rect: CGRect) {
         guard let text = self.text as NSString? else { return }
@@ -69,7 +58,7 @@ open class SMIconLabel: UILabel {
         var newRect = CGRect.zero
         let size = text.boundingRect(with: CGSize(width: frame.width - icon.size.width - iconPadding, height: CGFloat.greatestFiniteMagnitude),
                                      options: NSStringDrawingOptions.usesLineFragmentOrigin,
-                                     attributes: [ NSAttributedStringKey.font : font ],
+                                     attributes: [ .font : font ],
                                      context: nil).size
 
         guard let iconView = iconView else { return }

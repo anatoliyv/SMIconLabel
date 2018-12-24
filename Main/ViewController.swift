@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         var y: CGFloat = 80
 
         for index in 0..<6 {
-            let label = SMIconLabel(frame: CGRect(x: 20, y: y, width: view.frame.size.width - 20 * 2, height: 60))
+            let label = SMIconLabel(frame: CGRect(x: 20, y: y, width: view.frame.size.width - 20 * 2, height: 30))
             label.backgroundColor = UIColor.black.withAlphaComponent(0.1)
             label.font = UIFont.systemFont(ofSize: 12)
             label.textColor = UIColor.white
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             label.clipsToBounds = true
             label.layer.cornerRadius = 4
 
-            let topAlignment: SMIconVerticalPosition = .top
+            let topAlignment: SMIconLabel.VerticalPosition = .top
 
             switch index {
             case 0:
