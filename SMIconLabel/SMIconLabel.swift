@@ -58,7 +58,7 @@ open class SMIconLabel: UILabel {
         var newRect = CGRect.zero
         let size = text.boundingRect(with: CGSize(width: frame.width - icon.size.width - iconPadding, height: CGFloat.greatestFiniteMagnitude),
                                      options: NSStringDrawingOptions.usesLineFragmentOrigin,
-                                     attributes: [ .font : font ],
+                                     attributes: [ NSAttributedString.Key.font : font ],
                                      context: nil).size
 
         guard let iconView = iconView else { return }
